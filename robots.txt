@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://camaleao.privateluxurycollection.com/sitemap.xml
