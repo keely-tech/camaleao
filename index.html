@@ -749,7 +749,7 @@ function submitCamaleaoEnquiry(btn){
 function plcSetConsent(ok){
   var v = ok ? 'granted' : 'denied';
   try { localStorage.setItem('plc_consent', v); } catch(e) {}
-  gtag('consent', 'update', { ad_storage:v, analytics_storage:v, ad_user_data:v, ad_personalization:v });
+  gtag('consent', 'update', { ad_storage:v, analytics_storage:v, ad_user_data:v, ad_personalization:v }); if (ok) { gtag('event', 'page_view'); }
      if (ok) { gtag('event', 'page_view'); }
   if (typeof fbq === 'function') { fbq('consent', ok ? 'grant' : 'revoke'); }
   document.getElementById('cc-banner').classList.remove('show');
